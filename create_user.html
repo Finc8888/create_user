@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project1</title>
+</head>
+<body>
+  <div id="header">
+    <h1>PHP & MySQL: Dinamical pages</h1>
+  </div>
+  <div id="content">
+    <h2>Вступайте в наш виртуальный клуб</h2>
+    <p>Пожалуйста, введите ниже свои данные для связи в Интернете:</p>
+    <form action="create_user.php" method="POST">
+      <fieldset>
+        <label for="first_name">Имя:</label>
+        <input type="text" name="first_name" value="Вася"size="30" > <br>
+        <label for="last_name">Фамилия:</label>
+        <input type="text" name="last_name" value="Пупкин"size="30"><br>
+        <label for="email">Адрес электронной почты:</label>
+        <input type="text" name="email" value="Vasya@mail.ru"size="50"><br>
+        <label for="facebook_url">URL-адрес в Facebook:</label>
+        <input type="text" name="facebook_url" value="anna.novak.902?fref=pymk"size="50"><br>
+        <label for="twiter_handle">Индентификатор в Twitter:</label>
+        <input type="text" name="twiter_handle" value="@dota2"size="30"><br>
+      </fieldset>
+      <br>
+      <fieldset class="center">
+        <input type="submit" value="Вступить в клуб">
+        <input type="reset" value="Очистить и начать сначала">
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="footer"></div>
+</body>
+</html>

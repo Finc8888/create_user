@@ -1,0 +1,27 @@
+body{
+  background-color: grey;
+}
+.test{
+  margin-left: 0px;
+  border: 1px solid black;
+  text-align: center;
+  width: 50%;
+  /* padding-left: 200px; */
+}
+.test p{
+  text-align: justify;
+  margin-left: 50px;
+}
+#key{
+  color: blue;
+}
+#value{
+  color: white;
+}
+h4{
+  color: orange;
+}
+.back{
+  display: block;
+  margin-top: 300px;
+}
