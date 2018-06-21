@@ -14,18 +14,22 @@
   <div id="content">
     <h2>Вступайте в наш виртуальный клуб</h2>
     <p>Пожалуйста, введите ниже свои данные для связи в Интернете:</p>
-    <form action="create_user.php" method="POST">
+    <form action="create_user.php" method="POST" enctype="multipart/form-data">
       <fieldset>
         <label for="first_name">Имя:</label>
-        <input type="text" name="first_name" value="Вася"size="30" > <br>
+        <input type="text" name="first_name" size="30" > <br>
         <label for="last_name">Фамилия:</label>
-        <input type="text" name="last_name" value="Пупкин"size="30"><br>
+        <input type="text" name="last_name" size="30"><br>
         <label for="email">Адрес электронной почты:</label>
-        <input type="text" name="email" value="Vasya@mail.ru"size="50"><br>
+        <input type="text" name="email" size="50"><br>
         <label for="facebook_url">URL-адрес в Facebook:</label>
-        <input type="text" name="facebook_url" value="anna.novak.902?fref=pymk"size="50"><br>
+        <input type="text" name="facebook_url" size="50"><br>
         <label for="twiter_handle">Индентификатор в Twitter:</label>
-        <input type="text" name="twiter_handle" value="@dota2"size="30"><br>
+        <input type="text" name="twiter_handle" size="30"><br>
+        <label for="user_pic">Отправка изображения:</label>
+        <input type="file" name="user_pic" size="30"><br>
+        <label for="bio">Биография:</label>
+        <textarea name="bio" id="" cols="40" rows="10"></textarea>
       </fieldset>
       <br>
       <fieldset class="center">
@@ -34,7 +38,5 @@
       </fieldset>
     </form>
   </div>
-
-  <div class="footer"></div>
 </body>
 </html>

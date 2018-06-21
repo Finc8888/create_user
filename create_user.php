@@ -1,7 +1,13 @@
 <?php
+require "../database_connection.php";
+$name_table = "users";
+//Name user
 $first_name = $_REQUEST['first_name'];
+//Last name of user
 $last_name = $_REQUEST['last_name'];
+//Email of user
 $email = $_REQUEST['email'];
+//Facebook of user
 $facebook_url = str_replace("facebook.org", "facebook.com",
                             $_REQUEST['facebook_url']);
 // $position = strpos($facebook_url, "facebook.com");
@@ -10,17 +16,25 @@ $match = preg_match($reg, $facebook_url);
 if(!$match){
   $facebook_url = "http://www.facebook.com/".$facebook_url;
 }
-$twiter_handle = $_REQUEST['twiter_handle'];
-$twiter_url = "http://www.twitter.com/";
+//Twitter of user
+$twitter_handle = $_REQUEST['twiter_handle'];
+$twitter_url = "http://www.twitter.com/";
 // $position = strpos($twiter_handle, "@");
 $reg = "/^\s*@/";
-$match = preg_match($reg, $twiter_handle);
+$match = preg_match($reg, $twitter_handle);
 if (!$match) {
-  $twiter_url = $twiter_url . $twiter_handle;
+  $twitter_url = $twitter_url . $twitter_handle;
 }
 else {
-  $twiter_url = str_replace('@',$twiter_url,$twiter_handle);
+  $twitter_url = str_replace('@',$twitter_url,$twitter_handle);
 }
+
+$insert_data = "insert into {$name_table} (first_name, last_name, email,".
+  "facebook_url,twitter_handle) values('{$first_name}','{$last_name}', '{$email}',".
+  "'{$facebook_url}', '{$twitter_url}')";
+
+  mysql_query($insert_data)
+      or die("<h3>Что-то пошло не так: ".mysql_error()."</h3>");
 ?>
 
 <!DOCTYPE html>

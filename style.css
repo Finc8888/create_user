@@ -25,3 +25,16 @@ h4{
   display: block;
   margin-top: 300px;
 }
+.user_pic{
+  width: 250px;
+  height: 250px;
+  float: right;
+}
+.user_profile{
+  position: relative;
+}
+ul{
+  position: absolute;
+  clear: right;
+  margin-top: 10px;
+}
